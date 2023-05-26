@@ -1,0 +1,79 @@
+*{box-sizing: border-box;}
+body{
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+a{text-decoration: none;}
+body{background-image: url(../images/milky\ way.jpg);}
+form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 400px;
+}
+label{
+    display: block;
+    color: #ddd;
+    font-weight: bold;
+    position: absolute;
+    left: 15px;
+    top: -5px;
+    transition: .3s;
+}
+.main{
+    border: 1px solid #ddd;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: #000302;
+}
+.main input{
+    width: 80%;
+    height: 30px;
+    background-color: transparent;
+    caret-color: var(--blue-color);
+    padding: 5px 10px;
+    border: none;
+    flex: 1;
+    z-index: 1;
+    color: white;
+}
+.main input:focus{outline: none;}
+.main input:focus + label{
+    top: -20px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text p{color: #ddd; cursor: pointer; transition: .3s;}
+.text button{
+    color: white;
+    border: none;
+    background-color: #667087;
+    border-radius: 8px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.text button:hover {background-color: #7d3c3d;}
+.text p:hover {color:#7d3c3d;}
+.text{margin-top: 15px;}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 50px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+}
+i{color: #fff; font-size: 18px;}
+@media(max-width:500px){
+    form{
+        width: 90%;
+    }
+    .main input{width: 100%;}
+    .text p{font-size: 12px;}
+}
